@@ -1,0 +1,50 @@
+
+group = 'com.retotecnico.orangehrm'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.1.2")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+dependencies {
+    //Depedencias de Serenity
+    implementation 'net.serenity-bdd:serenity-core:2.1.2'
+    implementation 'net.serenity-bdd:serenity-junit:2.1.2'
+    implementation 'net.serenity-bdd:serenity-screenplay:2.1.2'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:2.1.2'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.51'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.1.1'
+
+    // Dependencia de JUnit 4
+    testImplementation 'junit:junit:4.12'
+    testImplementation('org.slf4j:slf4j-simple:1.7.7')
+
+}
+
+test {
+    useJUnit()  // Configura el uso de JUnit 4 en lugar de JUnit 5
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
