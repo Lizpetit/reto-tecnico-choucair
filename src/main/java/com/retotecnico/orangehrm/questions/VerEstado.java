@@ -28,7 +28,7 @@ public class VerEstado implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        actor.attemptsTo(Enter.theValue("Agustin").into(CAMPO_NOMBRE_CANDIDATO));
+        actor.attemptsTo(Enter.theValue("Joaquina").into(CAMPO_NOMBRE_CANDIDATO));
         BrowseTheWeb.as(actor).waitFor(5).seconds();
         actor.attemptsTo(Hit.the(Keys.ARROW_DOWN).into(CAMPO_NOMBRE_CANDIDATO));
         actor.attemptsTo(Hit.the(Keys.ENTER).into(CAMPO_NOMBRE_CANDIDATO));

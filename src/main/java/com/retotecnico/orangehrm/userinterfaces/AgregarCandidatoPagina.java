@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class AgregarCandidatoPagina {
     public static final Target OPCION_RECRUITMENT = Target.the("opcion Recruitment").
-            locatedBy("//a[@href='/web/index.php/recruitment/viewRecruitmentModule']//span");
+            locatedBy("//a[@href='/web/index.php/recruitment/viewRecruitmentModule']");
 
     public static final Target BOTON_ADD = Target.the("boton add")
             .locatedBy("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']");

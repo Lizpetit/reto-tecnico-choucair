@@ -10,10 +10,10 @@ Característica: Contratar empleado en la plataforma OrangeHRM
     Dado que se ingresa a la pagina de OrangeHRM con usuario <usuario> y clave <clave>
     Y se procede a agregar un candidato
     |nombre    |apellido   |vacante               |correo       |telefono|
-    |Agustin  |Petit      |Payroll Administrator |liz@gmail.com|123456  |
+    |Joaquina  |Petit      |Payroll Administrator |liz@gmail.com|123456  |
     Cuando cumple con el proceso de entrevista
       |titulo_entrevista|entrevistador|fecha     |
-      |Automatizador    |Orange       |2024-10-11|
+      |Automatizador    |Orange       |2024-14-11|
     Y el candidato es contratado
     Entonces validamos que el candidato tenga estado <contratado>
 

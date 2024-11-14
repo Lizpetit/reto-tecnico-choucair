@@ -26,7 +26,5 @@ public class IniciarSesion implements Task {
         actor.attemptsTo(Enter.theValue(usuario).into(CAMPO_USUARIO));
         actor.attemptsTo(Enter.theValue(clave).into(CAMPO_CLAVE));
         actor.attemptsTo(Click.on(BOTON_INICIAR_SESION));
-
-
     }
 }
